@@ -1,0 +1,119 @@
+Para cumplir con los requisitos de la prueba, necesite implementar varios componentes: la conexión con la API de Typeform, la configuración de las vistas internas en Odoo, la actualización automática de los datos, la integración opcional con el módulo Website de Odoo y la adición del widget con OWL. A continuación,  un esquema de cómo se podría implementar esta lógica junto con los scripts necesarios.
+
+
+Documentación del Proceso
+-Configuración de la Conexión API con Typeform:
+
+ - Consulta de la Documentación de la API de Typeform:
+
+    Me sumergí en la documentación oficial de la API de Typeform para comprender cómo interactuar con ella.
+    Exploré los endpoints disponibles, los parámetros de solicitud y las respuestas esperadas.
+
+ - Utilización del Token de Autenticación y el ID del Formulario:
+
+    Extraje el token de autenticación proporcionado por Typeform y lo almacené de manera segura para su uso en las solicitudes API.
+    Identifiqué y obtuve el ID único del formulario específico con el que deseaba interactuar, necesario para realizar solicitudes a la API.
+
+ - Implementación del Método en Odoo:
+
+    Desarrollé un método en Odoo para interactuar con la API de Typeform y obtener los datos del formulario.
+    Utilicé las bibliotecas adecuadas en Python para realizar solicitudes HTTP a la API de Typeform, utilizando el token de autenticación y el ID del formulario.
+
+-Diseño de las Vistas Internas en Odoo:
+
+ - Creación de Vistas Internas:
+
+    Accedí al Editor de Vistas en Odoo para crear nuevas vistas internas.
+    Diseñé las vistas internas teniendo en cuenta los requisitos específicos del cliente y la naturaleza de los datos del formulario.
+    Seleccioné los campos relevantes del formulario que se mostrarían en las vistas internas para facilitar el análisis de datos.
+
+ - Personalización de las Vistas:
+
+    Personalicé las vistas internas para mejorar la usabilidad y la estética.
+    Agregué funcionalidades adicionales, como filtros, grupos y ordenaciones, para permitir al usuario analizar los datos de manera más eficiente.
+    Me aseguré de mantener la consistencia con la identidad visual de la marca del cliente y optimicé la presentación de los datos para una fácil interpretación.
+
+-Actualización Automática de los Datos:
+
+ - Implementación de la Actualización Automática:
+
+    Investigué y evalué diferentes enfoques para implementar la actualización automática de los datos.
+    Opté por un enfoque que combinara la programación periódica de actualizaciones de datos y técnicas de actualización en tiempo real para garantizar la frescura y la precisión de los datos en las vistas internas.
+    {
+            "landing_id": "tandg56n19s8ssh5hdd2w8kktandg56n",
+            "token": "tandg56n19s8ssh5hdd2w8kktandg56n",
+            "response_id": "tandg56n19s8ssh5hdd2w8kktandg56n",
+            "response_type": "completed",
+            "landed_at": "2024-02-26T20:45:36Z",
+            "submitted_at": "2024-02-26T20:45:51Z",
+            "metadata": {
+                "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0",
+                "platform": "other",
+                "referer": "https://327u8hkzy07.typeform.com/to/ThUFPt1A",
+                "network_id": "5b852c67fc",
+                "browser": "default"
+            },
+            "hidden": {},
+            "calculated": {
+                "score": 0
+            },
+            "answers": [
+                {
+                    "field": {
+                        "id": "W6QoXDDk5C3M",
+                        "type": "short_text",
+                        "ref": "01HQJAHDGCJKCJGK8K0K769W7E"
+                    },
+                    "type": "text",
+                    "text": "Vicente"
+                },
+                {
+                    "field": {
+                        "id": "bYaDbWwg8gyN",
+                        "type": "multiple_choice",
+                        "ref": "01HQJAHDHABBR97TPT9A1M8KFZ"
+                    },
+                    "type": "choice",
+                    "choice": {
+                        "id": "Jn18dpX8Qxja",
+                        "ref": "01HQJAHDHAHY7EAKSJJ10BPE2V",
+                        "label": "SAP"
+                    }
+                },
+                {
+                    "field": {
+                        "id": "i9RxtaHDo9Jn",
+                        "type": "number",
+                        "ref": "afea4602-e520-451d-b215-1148ab053f5b"
+                    },
+                    "type": "number",
+                    "number": 1990
+                }
+            ]
+        }
+
+Se ha hecho a traves de Postman las imagenes están ordenadas
+
+Integración con el Módulo Website (Opcional):
+
+ - Estudio de la Integración con el Módulo Website:
+
+    Analicé la viabilidad y los beneficios de integrar el formulario como un "embed" en la página web del cliente utilizando el módulo "Website" de Odoo.
+    Revisé las funcionalidades disponibles en el módulo Website para determinar la mejor manera de incrustar el formulario en la página web existente. Pero no pude en el módulo debid a que no tengo el acceso
+
+ - Implementación de los Cambios Necesarios:
+
+-Adición de Widget con OWL:
+
+ - Investigación de la Documentación de OWL:
+
+Al comenzar esta fase, me di cuenta de que necesitaba entender cómo crear y agregar un widget que permitiera a los usuarios rellenar un campo porcentual utilizando un slider en Odoo. Sin embargo, debido a mi falta de experiencia previa con OWL en Odoo, me encontré con un desafío.
+
+Intenté abordar este desafío sumergiéndome en la documentación de OWL en Odoo. Investigué las diferentes clases y métodos disponibles que podrían ser útiles para crear el widget deseado. Sin embargo, debido a la complejidad del sistema y mi falta de familiaridad con él, encontré dificultades para identificar los elementos clave necesarios para la implementación del widget.
+
+ - Intentos de Implementación del Widget:
+
+A pesar de mi esfuerzo por comprender la documentación de OWL, me resultó difícil traducir ese conocimiento en una implementación práctica del widget en el formulario de Odoo. Mis intentos de desarrollar y agregar el widget se vieron obstaculizados por mi falta de comprensión de cómo trabajar con OWL y adaptar sus funcionalidades a mis necesidades específicas.
+
+Durante este proceso, experimenté con diferentes enfoques y probé diversas combinaciones de clases y métodos de OWL. Sin embargo, mis intentos no produjeron los resultados deseados y me di cuenta de que necesitaba más conocimientos y experiencia en OWL para completar con éxito esta tarea.
+
